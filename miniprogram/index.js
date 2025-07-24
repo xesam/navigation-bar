@@ -50,6 +50,14 @@ Component({
             type: Number,
             value: 1
         },
+        autoNav: {
+            type: Boolean,
+            value: false
+        },
+        homePage: {
+            type: String,
+            value: ''
+        },
     },
     /**
      * 组件的初始数据
@@ -59,6 +67,20 @@ Component({
     },
     lifetimes: {
         attached() {
+            if (this.data.autoNav) {
+                if (getCurrentPages().length === 1) {
+                    this.setData({
+                        back: false,
+                        homeButton: true
+                    })
+                } else {
+                    this.setData({
+                        back: true,
+                        homeButton: false
+                    })
+                }
+            }
+
             const rect = wx.getMenuButtonBoundingClientRect()
             const {platform} = wx.getDeviceInfo()
             const {windowWidth, safeArea} = wx.getWindowInfo()
@@ -101,7 +123,19 @@ Component({
             this.triggerEvent('back', {delta: data.delta}, {})
         },
         home() {
-            this.triggerEvent('home', {}, {})
+            if (this.data.autoNav) {
+                if (this.data.homeButton) {
+                    wx.redirectTo({
+                        url: this.data.homePage
+                    })
+                } else {
+                    wx.navigateBack({
+                        delta: this.data.delta
+                    })
+                }
+            } else {
+                this.triggerEvent('home', {}, {})
+            }
         }
     },
 })
