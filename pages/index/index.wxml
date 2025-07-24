@@ -7,7 +7,7 @@
         <view slot="left">回退</view>
     </navigation-bar>
     <navigation-bar title="自定义Left" back="{{false}}" color="black" background="#f5f5f5" loading>
-        <view slot="left" class="left">
+        <view slot="left" class="left" bind:tap="onTapNew">
             <image class="icon" src="./icon.svg"/>
             <text>新建对话</text>
         </view>

@@ -1,0 +1,9 @@
+/**index.wxss**/
+page {
+    height: 100vh;
+}
+
+.scrollarea {
+    flex: 1;
+    overflow-y: hidden;
+}
