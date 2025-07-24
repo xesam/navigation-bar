@@ -113,16 +113,16 @@ Component({
                 displayStyle
             })
         },
-        back() {
+        onTapBack() {
             const data = this.data
-            if (data.delta) {
+            if (data.delta > 0) {
                 wx.navigateBack({
                     delta: data.delta
                 })
             }
             this.triggerEvent('back', {delta: data.delta}, {})
         },
-        home() {
+        onTapHome() {
             if (this.data.autoNav) {
                 if (this.data.homeButton) {
                     wx.redirectTo({
@@ -133,9 +133,8 @@ Component({
                         delta: this.data.delta
                     })
                 }
-            } else {
-                this.triggerEvent('home', {}, {})
             }
+            this.triggerEvent('home', {}, {})
         }
     },
 })

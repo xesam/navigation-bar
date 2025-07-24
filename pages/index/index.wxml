@@ -1,7 +1,7 @@
 <scroll-view class="scrollarea" scroll-y type="list">
     <navigation-bar title="标题文字LongTitle" back="{{false}}" color="black" background="#f5f5f5"></navigation-bar>
     <navigation-bar title="标题文字" back="{{false}}" color="black" background="#f5f5f5"></navigation-bar>
-    <navigation-bar title="标题文字" back="{{true}}" color="black" background="#f5f5f5" loading bindback="back"></navigation-bar>
+    <navigation-bar title="标题Loading" back="{{true}}" color="black" background="#f5f5f5" loading bindback="back"></navigation-bar>
     <navigation-bar title="HomeButton" back="{{false}}" home-button="{{true}}" color="black" background="#f5f5f5" bindhome="home" loading></navigation-bar>
     <navigation-bar title="自定义Left" back="{{false}}" color="black" background="#f5f5f5" loading>
         <view slot="left">回退</view>
