@@ -1,7 +1,7 @@
 {
     "appid": "wx9029e39ac1befc18",
     "compileType": "miniprogram",
-    "libVersion": "3.6.5",
+    "libVersion": "3.5.8",
     "packOptions": {
         "ignore": [],
         "include": []
@@ -20,7 +20,19 @@
             "outputPath": ""
         }
     },
-    "condition": {},
+    "condition": {
+        "miniprogram": {
+            "list": [
+                {
+                    "name": "pages/not-home/index",
+                    "pathName": "pages/not-home/index",
+                    "query": "",
+                    "scene": null,
+                    "launchMode": "default"
+                }
+            ]
+        }
+    },
     "editorSetting": {
         "tabIndent": "insertSpaces",
         "tabSize": 4
