@@ -9,7 +9,7 @@
     <navigation-bar title="自定义Left" back="{{false}}" color="black" background="#f5f5f5" loading>
         <view slot="left" class="left" bind:tap="onTapNew">
             <image class="icon" src="./icon.svg"/>
-            <text>新建对话</text>
+            <text>新页面</text>
         </view>
     </navigation-bar>
     <navigation-bar title="自定义Right" back="{{false}}" color="black" background="#f5f5f5" loading>
