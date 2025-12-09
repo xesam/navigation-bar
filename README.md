@@ -14,7 +14,7 @@
 1. 安装：
 
 ```shell
-npm install git@github.com:miniapp-develop/navigation-bar.git
+npm install git@github.com:xesam/navigation-bar.git
 ```
 
 2. 执行 IDE 工具栏的 `构建npm` 命令。

@@ -1,40 +1,53 @@
 {
-    "appid": "wx9029e39ac1befc18",
-    "compileType": "miniprogram",
-    "libVersion": "3.5.8",
-    "packOptions": {
-        "ignore": [],
-        "include": []
+  "appid": "wx9029e39ac1befc18",
+  "compileType": "miniprogram",
+  "libVersion": "3.5.8",
+  "packOptions": {
+    "ignore": [],
+    "include": []
+  },
+  "setting": {
+    "coverView": true,
+    "es6": true,
+    "postcss": true,
+    "minified": true,
+    "enhance": true,
+    "showShadowRootInWxmlPanel": true,
+    "packNpmRelationList": [],
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
     },
-    "setting": {
-        "coverView": true,
-        "es6": true,
-        "postcss": true,
-        "minified": true,
-        "enhance": true,
-        "showShadowRootInWxmlPanel": true,
-        "packNpmRelationList": [],
-        "babelSetting": {
-            "ignore": [],
-            "disablePlugins": [],
-            "outputPath": ""
+    "compileWorklet": false,
+    "uglifyFileName": false,
+    "uploadWithSourceMap": true,
+    "packNpmManually": false,
+    "minifyWXSS": true,
+    "minifyWXML": true,
+    "localPlugins": false,
+    "disableUseStrict": false,
+    "useCompilerPlugins": false,
+    "condition": false,
+    "swc": false,
+    "disableSWC": true
+  },
+  "condition": {
+    "miniprogram": {
+      "list": [
+        {
+          "name": "pages/not-home/index",
+          "pathName": "pages/not-home/index",
+          "query": "",
+          "scene": null,
+          "launchMode": "default"
         }
-    },
-    "condition": {
-        "miniprogram": {
-            "list": [
-                {
-                    "name": "pages/not-home/index",
-                    "pathName": "pages/not-home/index",
-                    "query": "",
-                    "scene": null,
-                    "launchMode": "default"
-                }
-            ]
-        }
-    },
-    "editorSetting": {
-        "tabIndent": "insertSpaces",
-        "tabSize": 4
+      ]
     }
+  },
+  "editorSetting": {
+    "tabIndent": "insertSpaces",
+    "tabSize": 4
+  },
+  "simulatorPluginLibVersion": {}
 }

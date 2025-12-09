@@ -1,10 +1,13 @@
 {
-    "name": "@mini-dev/navigation-bar",
-    "version": "0.0.3",
-    "description": "微信小程序自定义导航栏",
-    "miniprogram": "miniprogram",
-    "scripts": {},
-    "keywords": [],
-    "author": "",
-    "license": "ISC"
+  "name": "@mini-dev/navigation-bar",
+  "version": "0.0.3",
+  "description": "微信小程序自定义导航栏",
+  "miniprogram": "miniprogram",
+  "files": [
+    "miniprogram"
+  ],
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
