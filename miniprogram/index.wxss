@@ -58,6 +58,12 @@
     background-color: var(--weui-FG-0);
 }
 
+.weui-navigation-bar__btn_goback_icon {
+    width: 24px;
+    height: 24px;
+    display: block;
+}
+
 .weui-navigation-bar__center {
     font-size: 17px;
     text-align: center;
@@ -107,5 +113,11 @@
     -webkit-mask-size: cover;
     mask-size: cover;
     background-color: var(--weui-FG-0);
+}
+
+.weui-navigation-bar__btn_home_icon {
+    width: 24px;
+    height: 24px;
+    display: block;
 }
 

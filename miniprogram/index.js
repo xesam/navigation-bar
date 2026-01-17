@@ -58,6 +58,14 @@ Component({
             type: String,
             value: ''
         },
+        backIcon: {
+            type: String,
+            value: ''
+        },
+        homeIcon: {
+            type: String,
+            value: ''
+        },
     },
     /**
      * 组件的初始数据
