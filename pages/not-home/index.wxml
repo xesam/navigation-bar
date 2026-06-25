@@ -1,4 +1,11 @@
 <scroll-view class="scrollarea" scroll-y type="list">
+    <navigation-bar title="Auto Nav"
+                    color="black"
+                    background="#f5f5f5"
+                    bindback="back"
+                    bindhome="home"
+                    auto-nav
+                    home-page="/pages/index/index"/>
     <navigation-bar title="only home"
                     back="{{false}}"
                     home-button="{{true}}"
@@ -12,11 +19,4 @@
                     background="#f5f5f5"
                     bindback="back"
                     bindhome="home"/>
-    <navigation-bar title="Auto Nav"
-                    color="black"
-                    background="#f5f5f5"
-                    bindback="back"
-                    bindhome="home"
-                    auto-nav
-                    home-page="/pages/index/index"/>
 </scroll-view>

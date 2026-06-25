@@ -1,7 +1,9 @@
 <scroll-view class="scrollarea" scroll-y type="list">
-    <navigation-bar title="标题文字LongTitle" back="{{false}}" color="black" background="#f5f5f5"></navigation-bar>
+    <navigation-bar title="标题文字" back="{{false}}" home-button="{{true}}" color="black" loading background="#ff5500">
+        <view slot="right">右侧</view>
+    </navigation-bar>
     <navigation-bar title="标题文字" back="{{false}}" color="black" background="#f5f5f5"></navigation-bar>
-    <navigation-bar title="标题Loading" back="{{true}}" color="black" background="#f5f5f5" loading bindback="back"></navigation-bar>
+    <navigation-bar title="标题Loading" back="{{true}}" color="black" background="#f5f500" loading bindback="back"></navigation-bar>
     <navigation-bar title="HomeButton" back="{{false}}" home-button="{{true}}" color="black" background="#f5f5f5" bindhome="home" loading></navigation-bar>
     <navigation-bar title="自定义Left" back="{{false}}" color="black" background="#f5f5f5" loading>
         <view slot="left">回退</view>
@@ -16,7 +18,7 @@
         <view slot="right">切换</view>
     </navigation-bar>
     <navigation-bar back="{{false}}" color="black" background="#f5f5f5" loading>
-        <view slot="center">自定义Center</view>
+        <view slot="center">标题文字LongTitle</view>
     </navigation-bar>
     <navigation-bar title="自定义图标-Back" back="{{true}}" color="black" background="#f5f5f5" backIcon="/pages/index/icon.svg" bindback="back"></navigation-bar>
     <navigation-bar title="自定义图标-Home" back="{{false}}" home-button="{{true}}" color="black" background="#f5f5f5" homeIcon="/pages/index/icon.svg" bindhome="home"></navigation-bar>
