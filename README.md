@@ -15,7 +15,7 @@
 
 ## 示例
 
-![导航栏示例](screenshots/navigator-bar.jpg)
+![导航栏示例](screenshots/navigator-bar.png)
 
 ## 安装
 
