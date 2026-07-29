@@ -90,6 +90,43 @@ npm install git@github.com:xesam/navigation-bar.git
 </navigation-bar>
 ```
 
+### 4. 仅需适配的基础组件 `base`
+
+如果你的项目要完全自定义导航栏的样式与内容，只需要组件帮你处理好**胶囊按钮占位、安全区、iOS/Android 高度差异**这些适配逻辑，可以使用 `base` 入口。它不内置任何视觉样式，也不含返回/首页/loading 等行为，只提供一个布局壳和一个默认 slot。
+
+引入：
+
+```json
+{
+  "usingComponents": {
+    "nav-bar-base": "@mini-dev/navigation-bar/base"
+  }
+}
+```
+
+使用（在默认 slot 内自行摆放左/中/右内容）：
+
+```xml
+<nav-bar-base ext-class="custom-nav">
+  <view style="display:flex;justify-content:space-between;width:100%;">
+    <text bind:tap="onBack">返回</text>
+    <text>标题</text>
+    <text bind:tap="onMenu">菜单</text>
+  </view>
+</nav-bar-base>
+```
+
+#### `base` 属性说明
+
+| 属性名 | 类型 | 默认值 | 说明 |
+| --- | --- | --- | --- |
+| extClass | String | '' | 自定义类名，用于覆盖背景色、文字色等样式 |
+
+#### `index` 与 `base` 如何选择
+
+- 只需要适配、想完全自管样式与内容 → 用 `@mini-dev/navigation-bar/base`。
+- 需要内置的返回/首页按钮、loading、自动导航、weui 视觉、多 slot → 用 `@mini-dev/navigation-bar/index`。
+
 ## 属性说明
 
 | 属性名 | 类型 | 默认值 | 说明 |
@@ -127,13 +164,17 @@ npm install git@github.com:xesam/navigation-bar.git
 ```
 navigation-bar/
 ├── miniprogram/           # 组件实现目录
-│   ├── index.js          # 组件逻辑
-│   ├── index.json        # 组件配置
-│   ├── index.wxml        # 组件结构
-│   └── index.wxss        # 组件样式
+│   ├── index.js          # 完整组件逻辑
+│   ├── index.json        # 完整组件配置
+│   ├── index.wxml        # 完整组件结构
+│   ├── index.wxss        # 完整组件样式
+│   ├── base.js           # 基础适配组件逻辑
+│   ├── base.json         # 基础适配组件配置
+│   ├── base.wxml         # 基础适配组件结构
+│   └── base.wxss         # 基础适配组件样式
 ├── pages/                # 示例页面
-│   ├── index/            # 首页示例
-│   └── not-home/         # 非首页示例
+│   ├── index/            # 完整组件与基础适配组件示例
+│   └── not-home/         # 非首页示例（autoNav 返回分支）
 ├── screenshots/          # 示例截图
 ├── app.js                # 小程序入口文件
 ├── app.json              # 小程序全局配置
@@ -150,6 +191,10 @@ navigation-bar/
 - 右侧内容的内边距
 
 ## ChangeLog
+
+### 0.0.4
+
+- 新增基础适配组件 `@mini-dev/navigation-bar/base`，仅保留胶囊按钮占位、安全区、iOS/Android 高度适配，不含内置样式与行为，提供单个默认 slot
 
 ### 0.0.3
 

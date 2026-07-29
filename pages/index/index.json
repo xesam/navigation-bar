@@ -1,5 +1,6 @@
 {
   "usingComponents": {
-    "navigation-bar": "/miniprogram/index"
+    "navigation-bar": "/miniprogram/index",
+    "nav-bar-base": "/miniprogram/base"
   }
 }
